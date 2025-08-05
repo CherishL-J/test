@@ -1,4 +1,43 @@
-## 文件说明
+## OminiControl（基于 Flux 结构）
+
+### Train
+
+```bash
+bash train/script/train_multi_condition.sh
+```
+
+
+## InsertAnything（基于 Flux-Fill 结构）
+
+### Train
+
+```bash
+bash scripts/train.sh
+```
+
+### inference
+
+```bash
+python val_fill.py \
+  --input_json ../data/anytext_benchmark/wukong_word/test1k_input.json \
+  --output_dir result/fill_wukong \
+  --masked_input_dir result/wukong_word \
+  --output_jsonl result/fill_wukong.jsonl \
+  --glyph_dir ../data/anytext_benchmark/wukong_word/glyph_wukong
+```
+
+input_json：输入的 JSON 文件路径
+
+output_dir：生成图像的保存目录
+
+masked_input_dir：masked image保存目录
+
+output_jsonl：结果保存为 JSONL 格式
+
+glyph_dir：字形图像路径
+
+
+## 数据处理文件说明
 
 ### 1. 图像去重 (rm_duplicate.py)
 
