@@ -7,7 +7,7 @@ bash train/script/train_multi_condition.sh
 ```
 
 
-## InsertAnything（基于 Flux-Fill 结构）
+## InsertAnything（复现TextFlux, 基于 Flux-Fill 结构）
 
 ### Train
 
